@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{7F121707-E26A-4651-8D8C-71D2D8298AC8}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PromotionEngine/Program.cs">
+    <Files>
+      <File FileName="PromotionEngine/Program.cs" Line="13" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PromotionEngine" expanded="True">
+            <Node name="PromotionEngine" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.PromotionEngine FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
