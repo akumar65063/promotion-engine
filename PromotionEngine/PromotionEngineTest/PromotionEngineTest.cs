@@ -25,6 +25,8 @@ namespace PromotionEngineTest
         public void Test_GetTotalAmountAfterPromotions_With_Scenario_B()
         {
             var promotionList = BuildPromotionList();
+            var itemsWithPrice = GetItemsWithPrice();
+
             promotionEngine = new PromotionEngine.Promotion.PromotionEngine(new Order(), promotionList);
 
             amountAfterPromotions = promotionEngine.GetTotalAmountAfterPromotions();
@@ -42,6 +44,8 @@ namespace PromotionEngineTest
             
         }
 
+
+        //The list of all the active promotions to be passed to the promotion engine 
         private List<IPromotion> BuildPromotionList()
         {
             var activePromotions = new List<IPromotion>();
@@ -51,6 +55,19 @@ namespace PromotionEngineTest
             activePromotions.Add(new PairedPromotion('C', 'D', 30));
 
             return activePromotions;
+        }
+
+        
+
+        private static List<Item> GetItemsWithPrice()
+        {
+            var items = new List<Item>();
+            items.Add(new Item { SKU = 'A', Price = 50 });
+            items.Add(new Item { SKU = 'B', Price = 30 });
+            items.Add(new Item { SKU = 'C', Price = 20 });
+            items.Add(new Item { SKU = 'D', Price = 15 });
+
+            return items;
         }
 
 
