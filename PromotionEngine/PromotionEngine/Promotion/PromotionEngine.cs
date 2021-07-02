@@ -27,5 +27,14 @@ namespace PromotionEngine.Promotion
             return 0;
 
         }
+
+        //Calculates the total cost by summing the price of each item in the order
+        private double GetTotalAmountWithoutPromotions()
+        {
+            foreach (Item item in order.Items)
+                totalAmountWithoutPromotions += item.Price;
+
+            return totalAmountWithoutPromotions;
+        }
     }
 }
