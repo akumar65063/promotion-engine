@@ -1,7 +1,9 @@
 ﻿using System;
+using PromotionEngine.Models;
+
 namespace PromotionEngine.Promotion.PromotionTypes
 {
-    public class PairedPromotion
+    public class PairedPromotion:IPromotion
     {
         private char _firstItemSku, _secondItemSku;
         private double _priceForPair;
@@ -16,7 +18,7 @@ namespace PromotionEngine.Promotion.PromotionTypes
 
         //Returns the amount to be discounted after applying
         //this promotion
-        public double GetPromotionDiscount()
+        public double GetPromotionDiscount(Order order)
         {
             return 0;
         }
