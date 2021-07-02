@@ -66,7 +66,26 @@ namespace PromotionEngineTest
         [TestMethod]
         public void Test_GetTotalAmountAfterPromotions_With_Scenario_C()
         {
+            var cartItems = new List<Item>() { new Item { SKU='A'},
+                                               new Item { SKU='A'},
+                                               new Item { SKU='A'},
+                                               
+                                               
+                                               new Item { SKU='B'},
+                                               new Item { SKU='B'},
+                                               new Item { SKU='B'},
+                                               new Item { SKU='B'},
+                                               new Item { SKU='B'},
+                                               
+                                               new Item { SKU='C'},
 
+                                               new Item { SKU='D'},
+                                               };
+
+            var promotionList = BuildPromotionList();
+
+            var order = BuildOrder(cartItems);
+            promotionEngine = new PromotionEngine.Promotion.PromotionEngine(order, promotionList);
             amountAfterPromotions = promotionEngine.GetTotalAmountAfterPromotions();
 
             Assert.AreEqual(amountAfterPromotions, 280);
