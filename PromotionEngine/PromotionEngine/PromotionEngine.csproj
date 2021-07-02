@@ -8,9 +8,11 @@
   <ItemGroup>
     <None Remove="Models\" />
     <None Remove="Promotion\" />
+    <None Remove="Promotion\PromotionTypes\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Promotion\" />
+    <Folder Include="Promotion\PromotionTypes\" />
   </ItemGroup>
 </Project>
