@@ -1,19 +1,18 @@
 ﻿<Properties StartupConfiguration="{7F121707-E26A-4651-8D8C-71D2D8298AC8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="PromotionEngine/Models/ShoppingCart.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PromotionEngineTest/UnitTest1.cs">
     <Files>
+      <File FileName="PromotionEngine/Models/ShoppingCart.cs" Line="1" Column="1" />
       <File FileName="PromotionEngine/Program.cs" Line="13" Column="1" />
-      <File FileName="PromotionEngine/Models/Item.cs" Line="14" Column="1" />
-      <File FileName="PromotionEngine/Models/Order.cs" Line="11" Column="1" />
-      <File FileName="PromotionEngine/Models/ShoppingCart.cs" Line="13" Column="1" />
+      <File FileName="PromotionEngine/Promotion/PromotionEngine.cs" Line="18" Column="1" />
+      <File FileName="PromotionEngineTest/UnitTest1.cs" Line="13" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="PromotionEngine" expanded="True">
-            <Node name="PromotionEngine" expanded="True">
-              <Node name="Models" expanded="True">
-                <Node name="ShoppingCart.cs" selected="True" />
-              </Node>
+            <Node name="PromotionEngine" expanded="True" />
+            <Node name="PromotionEngineTest" expanded="True">
+              <Node name="UnitTest1.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -27,4 +26,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.PromotionEngineTest FirstBuild="True" />
 </Properties>

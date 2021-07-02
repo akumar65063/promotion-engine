@@ -1,0 +1,12 @@
+/Users/alokkumar/Desktop/promotion-engine/PromotionEngine/PromotionEngine/bin/Debug/netcoreapp3.1/PromotionEngine.deps.json
+/Users/alokkumar/Desktop/promotion-engine/PromotionEngine/PromotionEngine/bin/Debug/netcoreapp3.1/PromotionEngine.runtimeconfig.json
+/Users/alokkumar/Desktop/promotion-engine/PromotionEngine/PromotionEngine/bin/Debug/netcoreapp3.1/PromotionEngine.runtimeconfig.dev.json
+/Users/alokkumar/Desktop/promotion-engine/PromotionEngine/PromotionEngine/bin/Debug/netcoreapp3.1/PromotionEngine.dll
+/Users/alokkumar/Desktop/promotion-engine/PromotionEngine/PromotionEngine/bin/Debug/netcoreapp3.1/PromotionEngine.pdb
+/Users/alokkumar/Desktop/promotion-engine/PromotionEngine/PromotionEngine/obj/Debug/netcoreapp3.1/PromotionEngine.csproj.AssemblyReference.cache
+/Users/alokkumar/Desktop/promotion-engine/PromotionEngine/PromotionEngine/obj/Debug/netcoreapp3.1/PromotionEngine.AssemblyInfoInputs.cache
+/Users/alokkumar/Desktop/promotion-engine/PromotionEngine/PromotionEngine/obj/Debug/netcoreapp3.1/PromotionEngine.AssemblyInfo.cs
+/Users/alokkumar/Desktop/promotion-engine/PromotionEngine/PromotionEngine/obj/Debug/netcoreapp3.1/PromotionEngine.csproj.CoreCompileInputs.cache
+/Users/alokkumar/Desktop/promotion-engine/PromotionEngine/PromotionEngine/obj/Debug/netcoreapp3.1/PromotionEngine.dll
+/Users/alokkumar/Desktop/promotion-engine/PromotionEngine/PromotionEngine/obj/Debug/netcoreapp3.1/PromotionEngine.pdb
+/Users/alokkumar/Desktop/promotion-engine/PromotionEngine/PromotionEngine/obj/Debug/netcoreapp3.1/PromotionEngine.genruntimeconfig.cache
