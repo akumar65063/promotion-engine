@@ -21,20 +21,39 @@ namespace PromotionEngine.Promotion
             this.order = order;
         }
 
+        //Returns the total amount to be paied by customer after applying all applicable discounts
         public double GetTotalAmountAfterPromotions()
         {
 
-            return 0;
+            totalAmountWithoutPromotions = GetTotalAmountWithoutPromotions();
+            totalDiscount = GetDiscountAmountAfterAllPromotions();
+            amountToBePaidByCustomer = totalAmountWithoutPromotions - totalDiscount;
+            return amountToBePaidByCustomer;
 
         }
 
         //Calculates the total cost by summing the price of each item in the order
         private double GetTotalAmountWithoutPromotions()
         {
-            foreach (Item item in order.Items)
+            foreach (var item in order.Items)
                 totalAmountWithoutPromotions += item.Price;
 
             return totalAmountWithoutPromotions;
+        }
+
+        //Calculates the total discount after running all the applied promotions.
+        private double GetDiscountAmountAfterAllPromotions()
+        {
+            double discountAmount = 0;
+
+            foreach (var promotion in promotionList)
+            {
+                discountAmount += promotion.GetPromotionDiscount(order);
+            }
+
+            return discountAmount;
+
+
         }
     }
 }
