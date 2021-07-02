@@ -1,7 +1,7 @@
 ﻿using System;
 namespace PromotionEngine.Promotion.PromotionTypes
 {
-    public class BundledPromotion
+    public class BundledPromotion:IPromotion
     {
         private char _itemSKU;
         private int _itemCountInOneBundle;
@@ -15,6 +15,9 @@ namespace PromotionEngine.Promotion.PromotionTypes
             _priceForBundle = priceForBundle;
         }
 
+
+        //Returns the amount to be discounted after applying
+        //this promotion
         public double GetPromotionDiscount()
         {
             return 0;

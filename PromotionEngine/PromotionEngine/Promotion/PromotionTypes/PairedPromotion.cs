@@ -13,6 +13,9 @@ namespace PromotionEngine.Promotion.PromotionTypes
             _priceForPair = priceforPair;
         }
 
+
+        //Returns the amount to be discounted after applying
+        //this promotion
         public double GetPromotionDiscount()
         {
             return 0;
