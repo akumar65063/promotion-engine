@@ -3,6 +3,7 @@ using PromotionEngine.Promotion;
 using PromotionEngine.Models;
 using PromotionEngine.Promotion.PromotionTypes;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PromotionEngineTest
 {
@@ -16,6 +17,17 @@ namespace PromotionEngineTest
         [TestMethod]
         public void Test_GetTotalAmountAfterPromotions_With_Scenario_A()
         {
+            var cartItems = new List<Item>() { new Item { SKU='A'},
+                                               new Item { SKU='B'},                                     
+                                               new Item { SKU='C'},                                                                            
+                                             };
+
+            var promotionList = BuildPromotionList();
+     
+            var order = BuildOrder(cartItems);
+
+            promotionEngine = new PromotionEngine.Promotion.PromotionEngine(order, promotionList);
+
             amountAfterPromotions = promotionEngine.GetTotalAmountAfterPromotions();
 
             Assert.AreEqual(amountAfterPromotions, 100);
@@ -24,10 +36,27 @@ namespace PromotionEngineTest
         [TestMethod]
         public void Test_GetTotalAmountAfterPromotions_With_Scenario_B()
         {
-            var promotionList = BuildPromotionList();
-            var itemsWithPrice = GetItemsWithPrice();
+            var cartItems =  new List<Item>() { new Item { SKU='A'},
+                                                new Item { SKU='A'},
+                                                new Item { SKU='A'},
+                                                new Item { SKU='A'},
+                                                new Item { SKU='A'},
+                                                
+                                                new Item { SKU='B'},
+                                                new Item { SKU='B'},
+                                                new Item { SKU='B'},
+                                                new Item { SKU='B'},
+                                                new Item { SKU='B'},
+                                                
+                                                new Item { SKU='C'},                                    
+                                                };
 
-            promotionEngine = new PromotionEngine.Promotion.PromotionEngine(new Order(), promotionList);
+            var promotionList = BuildPromotionList();
+
+            var order = BuildOrder(cartItems);
+
+
+            promotionEngine = new PromotionEngine.Promotion.PromotionEngine(order, promotionList);
 
             amountAfterPromotions = promotionEngine.GetTotalAmountAfterPromotions();
 
@@ -45,6 +74,7 @@ namespace PromotionEngineTest
         }
 
 
+        #region private methods to build the test input data
         //The list of all the active promotions to be passed to the promotion engine 
         private List<IPromotion> BuildPromotionList()
         {
@@ -69,6 +99,24 @@ namespace PromotionEngineTest
 
             return items;
         }
+
+        //This method will build the orders so that it contains the price of
+        //each item against the items in the order
+        private Order BuildOrder(List<Item> cartItems)
+        {
+
+            var itemPriceList = GetItemsWithPrice();
+
+            var order = new Order();
+
+            order.Items = (from item in itemPriceList
+                           join cart in cartItems
+                           on item.SKU equals cart.SKU
+                           select new Item { SKU = cart.SKU, Price = item.Price }).ToList();
+
+            return order;
+        }
+        #endregion private methods to build the test input data
 
 
     }
