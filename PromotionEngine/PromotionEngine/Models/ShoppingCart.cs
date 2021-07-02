@@ -28,9 +28,10 @@ namespace PromotionEngine.Models
                                       //new Item { SKU='B'},
                                       //new Item { SKU='B'},
 
-                                      new Item { SKU='C'},
+                                      new Item { SKU='C'}
                                       //new Item { SKU='C'},
                                       //new Item { SKU='D'}
                                       };
         }
+    }
 }
